@@ -1,5 +1,6 @@
 """Contrôleur principal de l'application."""
 
+from controllers.player_controller import PlayerController
 from controllers.tournament_controller import TournamentController
 from utils.json_manager import load_tournaments
 from views.menu_view import display_main_menu, display_reports_menu
@@ -25,8 +26,10 @@ class AppController:
             elif choice == "2":
                 TournamentController().load_tournament()
             elif choice == "3":
-                self._reports()
+                PlayerController().run()
             elif choice == "4":
+                self._reports()
+            elif choice == "5":
                 print("Au revoir !")
                 break
             else:
@@ -55,18 +58,9 @@ class AppController:
 
     def _report_all_players(self) -> None:
         """Affiche tous les joueurs connus, triés alphabétiquement."""
-        tournaments = load_tournaments()
-        seen = set()
-        players = []
-        for t in tournaments:
-            for p in t["players"]:
-                if p["national_id"] not in seen:
-                    seen.add(p["national_id"])
-                    players.append(p)
-        players.sort(key=lambda p: (p["last_name"], p["first_name"]))
-        print("\n=== TOUS LES JOUEURS ===")
-        for p in players:
-            print(f"  {p['last_name']} {p['first_name']} ({p['national_id']})")
+        from utils.json_manager import load_players
+        from views.player_view import display_all_players
+        display_all_players(load_players())
 
     def _pick_tournament(self):
         """Affiche la liste des tournois et retourne celui choisi par l'utilisateur."""

@@ -7,14 +7,14 @@ from models.match import Match
 from models.player import Player
 from models.round import Round
 from models.tournament import Tournament
-from utils.json_manager import load_tournaments, save_tournament
+from utils.json_manager import load_players, load_tournaments, save_player, save_tournament
 from views.menu_view import display_tournament_menu
+from views.player_view import display_all_players
 from views.tournament_view import (
     display_all_tournaments,
     display_players,
     display_round,
     prompt_match_result,
-    prompt_new_player,
     prompt_new_tournament,
 )
 
@@ -81,7 +81,32 @@ class TournamentController:
                 print("Choix invalide.")
 
     def _add_player(self) -> None:
-        """Ajoute un joueur au tournoi après validation des données saisies."""
+        """Ajoute un joueur au tournoi depuis la base ou en le créant."""
+        existing = load_players()
+        if existing:
+            display_all_players(existing)
+            print("  0. Créer un nouveau joueur")
+            choice = input("\nNuméro du joueur à inscrire (ou 0) : ").strip().rstrip(".")
+            if choice.isdigit() and 1 <= int(choice) <= len(existing):
+                data = sorted(
+                    existing,
+                    key=lambda x: (x["last_name"], x["first_name"])
+                )[int(choice) - 1]
+                try:
+                    player = Player.from_dict(data)
+                    player.score = 0.0
+                    self.tournament.add_player(player)
+                    save_tournament(self.tournament)
+                    print(f"{player.first_name} {player.last_name} inscrit(e).")
+                except ValueError as e:
+                    print(f"Erreur : {e}")
+                return
+
+        self._create_and_add_player()
+
+    def _create_and_add_player(self) -> None:
+        """Crée un nouveau joueur, le sauvegarde et l'ajoute au tournoi."""
+        from views.player_view import prompt_new_player
         first_name, last_name, birth_date, national_id = prompt_new_player()
         try:
             player = Player(
@@ -90,9 +115,10 @@ class TournamentController:
                 birth_date=date.fromisoformat(birth_date),
                 national_id=national_id,
             )
+            save_player(player)
             self.tournament.add_player(player)
             save_tournament(self.tournament)
-            print(f"{player.first_name} {player.last_name} ajouté(e).")
+            print(f"{player.first_name} {player.last_name} créé(e) et inscrit(e).")
         except ValueError as e:
             print(f"Erreur : {e}")
 

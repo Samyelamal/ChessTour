@@ -1,0 +1,464 @@
+{
+    "name": "Coupe de France",
+    "location": "Paris",
+    "start_date": "2026-05-29",
+    "end_date": "2026-05-29",
+    "number_of_rounds": 5,
+    "description": "Coupe des regions",
+    "current_round": 5,
+    "players": [
+        {
+            "first_name": "Vincent",
+            "last_name": "Pit",
+            "birth_date": "1970-06-04",
+            "national_id": "MY78564",
+            "score": 1.0
+        },
+        {
+            "first_name": "David",
+            "last_name": "Tangui",
+            "birth_date": "2000-08-23",
+            "national_id": "DU58930",
+            "score": 1.0
+        },
+        {
+            "first_name": "Cheikh",
+            "last_name": "Camara",
+            "birth_date": "1990-12-23",
+            "national_id": "SA68591",
+            "score": 2.0
+        },
+        {
+            "first_name": "Samy",
+            "last_name": "El Amal",
+            "birth_date": "1997-08-30",
+            "national_id": "PO46830",
+            "score": 2.5
+        },
+        {
+            "first_name": "Cheikh",
+            "last_name": "Camara",
+            "birth_date": "1990-12-23",
+            "national_id": "SA68591",
+            "score": 3.5
+        },
+        {
+            "first_name": "Samy",
+            "last_name": "El Amal",
+            "birth_date": "1997-08-30",
+            "national_id": "PO46830",
+            "score": 4.0
+        },
+        {
+            "first_name": "Vincent",
+            "last_name": "Pit",
+            "birth_date": "1970-06-04",
+            "national_id": "MY78564",
+            "score": 3.5
+        },
+        {
+            "first_name": "David",
+            "last_name": "Tangui",
+            "birth_date": "2000-08-23",
+            "national_id": "DU58930",
+            "score": 2.5
+        }
+    ],
+    "rounds": [
+        {
+            "name": "Round 1",
+            "matches": [
+                {
+                    "player_1": {
+                        "first_name": "Vincent",
+                        "last_name": "Pit",
+                        "birth_date": "1970-06-04",
+                        "national_id": "MY78564",
+                        "score": 3.5
+                    },
+                    "player_2": {
+                        "first_name": "Cheikh",
+                        "last_name": "Camara",
+                        "birth_date": "1990-12-23",
+                        "national_id": "SA68591",
+                        "score": 2.0
+                    },
+                    "score_1": 1,
+                    "score_2": 0
+                },
+                {
+                    "player_1": {
+                        "first_name": "Samy",
+                        "last_name": "El Amal",
+                        "birth_date": "1997-08-30",
+                        "national_id": "PO46830",
+                        "score": 4.0
+                    },
+                    "player_2": {
+                        "first_name": "Samy",
+                        "last_name": "El Amal",
+                        "birth_date": "1997-08-30",
+                        "national_id": "PO46830",
+                        "score": 2.5
+                    },
+                    "score_1": 0,
+                    "score_2": 1
+                },
+                {
+                    "player_1": {
+                        "first_name": "Cheikh",
+                        "last_name": "Camara",
+                        "birth_date": "1990-12-23",
+                        "national_id": "SA68591",
+                        "score": 3.5
+                    },
+                    "player_2": {
+                        "first_name": "David",
+                        "last_name": "Tangui",
+                        "birth_date": "2000-08-23",
+                        "national_id": "DU58930",
+                        "score": 2.5
+                    },
+                    "score_1": 0.5,
+                    "score_2": 0.5
+                },
+                {
+                    "player_1": {
+                        "first_name": "Vincent",
+                        "last_name": "Pit",
+                        "birth_date": "1970-06-04",
+                        "national_id": "MY78564",
+                        "score": 1.0
+                    },
+                    "player_2": {
+                        "first_name": "David",
+                        "last_name": "Tangui",
+                        "birth_date": "2000-08-23",
+                        "national_id": "DU58930",
+                        "score": 1.0
+                    },
+                    "score_1": 0.5,
+                    "score_2": 0.5
+                }
+            ],
+            "start_time": "2026-05-29T12:53:16.952740",
+            "end_time": "2026-05-29T12:53:29.450599"
+        },
+        {
+            "name": "Round 2",
+            "matches": [
+                {
+                    "player_1": {
+                        "first_name": "Samy",
+                        "last_name": "El Amal",
+                        "birth_date": "1997-08-30",
+                        "national_id": "PO46830",
+                        "score": 2.5
+                    },
+                    "player_2": {
+                        "first_name": "Vincent",
+                        "last_name": "Pit",
+                        "birth_date": "1970-06-04",
+                        "national_id": "MY78564",
+                        "score": 3.5
+                    },
+                    "score_1": 0.5,
+                    "score_2": 0.5
+                },
+                {
+                    "player_1": {
+                        "first_name": "Vincent",
+                        "last_name": "Pit",
+                        "birth_date": "1970-06-04",
+                        "national_id": "MY78564",
+                        "score": 1.0
+                    },
+                    "player_2": {
+                        "first_name": "Samy",
+                        "last_name": "El Amal",
+                        "birth_date": "1997-08-30",
+                        "national_id": "PO46830",
+                        "score": 4.0
+                    },
+                    "score_1": 0,
+                    "score_2": 1
+                },
+                {
+                    "player_1": {
+                        "first_name": "David",
+                        "last_name": "Tangui",
+                        "birth_date": "2000-08-23",
+                        "national_id": "DU58930",
+                        "score": 1.0
+                    },
+                    "player_2": {
+                        "first_name": "David",
+                        "last_name": "Tangui",
+                        "birth_date": "2000-08-23",
+                        "national_id": "DU58930",
+                        "score": 2.5
+                    },
+                    "score_1": 0,
+                    "score_2": 1
+                },
+                {
+                    "player_1": {
+                        "first_name": "Cheikh",
+                        "last_name": "Camara",
+                        "birth_date": "1990-12-23",
+                        "national_id": "SA68591",
+                        "score": 3.5
+                    },
+                    "player_2": {
+                        "first_name": "Cheikh",
+                        "last_name": "Camara",
+                        "birth_date": "1990-12-23",
+                        "national_id": "SA68591",
+                        "score": 2.0
+                    },
+                    "score_1": 1,
+                    "score_2": 0
+                }
+            ],
+            "start_time": "2026-05-29T12:53:35.878753",
+            "end_time": "2026-05-29T12:53:44.673796"
+        },
+        {
+            "name": "Round 3",
+            "matches": [
+                {
+                    "player_1": {
+                        "first_name": "Samy",
+                        "last_name": "El Amal",
+                        "birth_date": "1997-08-30",
+                        "national_id": "PO46830",
+                        "score": 2.5
+                    },
+                    "player_2": {
+                        "first_name": "Cheikh",
+                        "last_name": "Camara",
+                        "birth_date": "1990-12-23",
+                        "national_id": "SA68591",
+                        "score": 3.5
+                    },
+                    "score_1": 0,
+                    "score_2": 1
+                },
+                {
+                    "player_1": {
+                        "first_name": "Vincent",
+                        "last_name": "Pit",
+                        "birth_date": "1970-06-04",
+                        "national_id": "MY78564",
+                        "score": 3.5
+                    },
+                    "player_2": {
+                        "first_name": "Vincent",
+                        "last_name": "Pit",
+                        "birth_date": "1970-06-04",
+                        "national_id": "MY78564",
+                        "score": 1.0
+                    },
+                    "score_1": 1,
+                    "score_2": 0
+                },
+                {
+                    "player_1": {
+                        "first_name": "David",
+                        "last_name": "Tangui",
+                        "birth_date": "2000-08-23",
+                        "national_id": "DU58930",
+                        "score": 2.5
+                    },
+                    "player_2": {
+                        "first_name": "Samy",
+                        "last_name": "El Amal",
+                        "birth_date": "1997-08-30",
+                        "national_id": "PO46830",
+                        "score": 4.0
+                    },
+                    "score_1": 0,
+                    "score_2": 1
+                },
+                {
+                    "player_1": {
+                        "first_name": "David",
+                        "last_name": "Tangui",
+                        "birth_date": "2000-08-23",
+                        "national_id": "DU58930",
+                        "score": 1.0
+                    },
+                    "player_2": {
+                        "first_name": "Cheikh",
+                        "last_name": "Camara",
+                        "birth_date": "1990-12-23",
+                        "national_id": "SA68591",
+                        "score": 2.0
+                    },
+                    "score_1": 0,
+                    "score_2": 1
+                }
+            ],
+            "start_time": "2026-05-29T12:53:50.997214",
+            "end_time": "2026-05-29T12:54:08.135449"
+        },
+        {
+            "name": "Round 4",
+            "matches": [
+                {
+                    "player_1": {
+                        "first_name": "Cheikh",
+                        "last_name": "Camara",
+                        "birth_date": "1990-12-23",
+                        "national_id": "SA68591",
+                        "score": 3.5
+                    },
+                    "player_2": {
+                        "first_name": "Vincent",
+                        "last_name": "Pit",
+                        "birth_date": "1970-06-04",
+                        "national_id": "MY78564",
+                        "score": 3.5
+                    },
+                    "score_1": 0,
+                    "score_2": 1
+                },
+                {
+                    "player_1": {
+                        "first_name": "Samy",
+                        "last_name": "El Amal",
+                        "birth_date": "1997-08-30",
+                        "national_id": "PO46830",
+                        "score": 4.0
+                    },
+                    "player_2": {
+                        "first_name": "Samy",
+                        "last_name": "El Amal",
+                        "birth_date": "1997-08-30",
+                        "national_id": "PO46830",
+                        "score": 2.5
+                    },
+                    "score_1": 1,
+                    "score_2": 0
+                },
+                {
+                    "player_1": {
+                        "first_name": "David",
+                        "last_name": "Tangui",
+                        "birth_date": "2000-08-23",
+                        "national_id": "DU58930",
+                        "score": 2.5
+                    },
+                    "player_2": {
+                        "first_name": "Cheikh",
+                        "last_name": "Camara",
+                        "birth_date": "1990-12-23",
+                        "national_id": "SA68591",
+                        "score": 2.0
+                    },
+                    "score_1": 1,
+                    "score_2": 0
+                },
+                {
+                    "player_1": {
+                        "first_name": "Vincent",
+                        "last_name": "Pit",
+                        "birth_date": "1970-06-04",
+                        "national_id": "MY78564",
+                        "score": 1.0
+                    },
+                    "player_2": {
+                        "first_name": "David",
+                        "last_name": "Tangui",
+                        "birth_date": "2000-08-23",
+                        "national_id": "DU58930",
+                        "score": 1.0
+                    },
+                    "score_1": 0.5,
+                    "score_2": 0.5
+                }
+            ],
+            "start_time": "2026-05-29T12:54:10.670389",
+            "end_time": "2026-05-29T12:54:28.436279"
+        },
+        {
+            "name": "Round 5",
+            "matches": [
+                {
+                    "player_1": {
+                        "first_name": "Vincent",
+                        "last_name": "Pit",
+                        "birth_date": "1970-06-04",
+                        "national_id": "MY78564",
+                        "score": 3.5
+                    },
+                    "player_2": {
+                        "first_name": "Samy",
+                        "last_name": "El Amal",
+                        "birth_date": "1997-08-30",
+                        "national_id": "PO46830",
+                        "score": 4.0
+                    },
+                    "score_1": 0,
+                    "score_2": 1
+                },
+                {
+                    "player_1": {
+                        "first_name": "Cheikh",
+                        "last_name": "Camara",
+                        "birth_date": "1990-12-23",
+                        "national_id": "SA68591",
+                        "score": 3.5
+                    },
+                    "player_2": {
+                        "first_name": "David",
+                        "last_name": "Tangui",
+                        "birth_date": "2000-08-23",
+                        "national_id": "DU58930",
+                        "score": 2.5
+                    },
+                    "score_1": 1,
+                    "score_2": 0
+                },
+                {
+                    "player_1": {
+                        "first_name": "Samy",
+                        "last_name": "El Amal",
+                        "birth_date": "1997-08-30",
+                        "national_id": "PO46830",
+                        "score": 2.5
+                    },
+                    "player_2": {
+                        "first_name": "Vincent",
+                        "last_name": "Pit",
+                        "birth_date": "1970-06-04",
+                        "national_id": "MY78564",
+                        "score": 1.0
+                    },
+                    "score_1": 1,
+                    "score_2": 0
+                },
+                {
+                    "player_1": {
+                        "first_name": "David",
+                        "last_name": "Tangui",
+                        "birth_date": "2000-08-23",
+                        "national_id": "DU58930",
+                        "score": 1.0
+                    },
+                    "player_2": {
+                        "first_name": "Cheikh",
+                        "last_name": "Camara",
+                        "birth_date": "1990-12-23",
+                        "national_id": "SA68591",
+                        "score": 2.0
+                    },
+                    "score_1": 0,
+                    "score_2": 1
+                }
+            ],
+            "start_time": "2026-05-29T12:54:32.351360",
+            "end_time": "2026-05-29T12:55:14.575729"
+        }
+    ]
+}

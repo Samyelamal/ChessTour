@@ -1,0 +1,30 @@
+[
+    {
+        "first_name": "Vincent",
+        "last_name": "Pit",
+        "birth_date": "1970-06-04",
+        "national_id": "MY78564",
+        "score": 0.0
+    },
+    {
+        "first_name": "David",
+        "last_name": "Tangui",
+        "birth_date": "2000-08-23",
+        "national_id": "DU58930",
+        "score": 0.0
+    },
+    {
+        "first_name": "Cheikh",
+        "last_name": "Camara",
+        "birth_date": "1990-12-23",
+        "national_id": "SA68591",
+        "score": 0.0
+    },
+    {
+        "first_name": "Samy",
+        "last_name": "El Amal",
+        "birth_date": "1997-08-30",
+        "national_id": "PO46830",
+        "score": 0.0
+    }
+]

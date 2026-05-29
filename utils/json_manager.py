@@ -1,34 +1,61 @@
-"""Utilitaires de sauvegarde et chargement des tournois en JSON."""
+"""Utilitaires de sauvegarde et chargement des données en JSON."""
 
 import json
 from pathlib import Path
 
-DATA_FILE = Path("data/tournaments.json")
+TOURNAMENTS_DIR = Path("data/tournaments")
+PLAYERS_FILE = Path("data/players.json")
+
+
+def _tournament_file(name: str) -> Path:
+    """Retourne le chemin du fichier JSON d'un tournoi à partir de son nom."""
+    safe_name = name.lower().replace(" ", "_")
+    return TOURNAMENTS_DIR / f"{safe_name}.json"
 
 
 def load_tournaments() -> list:
-    """Charge et retourne la liste des tournois depuis le fichier JSON."""
-    if not DATA_FILE.exists():
+    """Charge et retourne la liste de tous les tournois depuis le dossier."""
+    if not TOURNAMENTS_DIR.exists():
         return []
-    with open(DATA_FILE, "r", encoding="utf-8") as f:
+    tournaments = []
+    for filepath in sorted(TOURNAMENTS_DIR.glob("*.json")):
+        with open(filepath, "r", encoding="utf-8") as f:
+            try:
+                tournaments.append(json.load(f))
+            except json.JSONDecodeError:
+                continue
+    return tournaments
+
+
+def save_tournament(tournament) -> None:
+    """Sauvegarde un tournoi dans son propre fichier JSON."""
+    TOURNAMENTS_DIR.mkdir(parents=True, exist_ok=True)
+    filepath = _tournament_file(tournament.name)
+    with open(filepath, "w", encoding="utf-8") as f:
+        json.dump(tournament.to_dict(), f, indent=4, ensure_ascii=False)
+
+
+def load_players() -> list:
+    """Charge et retourne la liste des joueurs depuis le fichier JSON."""
+    if not PLAYERS_FILE.exists():
+        return []
+    with open(PLAYERS_FILE, "r", encoding="utf-8") as f:
         try:
             return json.load(f)
         except json.JSONDecodeError:
             return []
 
 
-def save_tournament(tournament) -> None:
-    """Sauvegarde ou met à jour un tournoi dans le fichier JSON."""
-    DATA_FILE.parent.mkdir(exist_ok=True)
-    tournaments = load_tournaments()
-    tournament_dict = tournament.to_dict()
+def save_player(player) -> None:
+    """Sauvegarde un nouveau joueur dans le fichier JSON si non existant."""
+    PLAYERS_FILE.parent.mkdir(exist_ok=True)
+    players = load_players()
 
-    for i, t in enumerate(tournaments):
-        if t["name"] == tournament_dict["name"]:
-            tournaments[i] = tournament_dict
-            break
-    else:
-        tournaments.append(tournament_dict)
+    for p in players:
+        if p["national_id"] == player.to_dict()["national_id"]:
+            return
 
-    with open(DATA_FILE, "w", encoding="utf-8") as f:
-        json.dump(tournaments, f, indent=4, ensure_ascii=False)
+    players.append(player.to_dict())
+
+    with open(PLAYERS_FILE, "w", encoding="utf-8") as f:
+        json.dump(players, f, indent=4, ensure_ascii=False)
