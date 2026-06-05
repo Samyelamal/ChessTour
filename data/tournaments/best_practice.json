@@ -1,0 +1,33 @@
+{
+    "name": "Best Practice",
+    "location": "Lille",
+    "start_date": "2026-07-23",
+    "end_date": "2026-07-15",
+    "number_of_rounds": 8,
+    "description": "Tournois amateur inter saison",
+    "current_round": 0,
+    "players": [
+        {
+            "first_name": "Dave",
+            "last_name": "Cho",
+            "birth_date": "1987-04-12",
+            "national_id": "DE75684",
+            "score": 0.0
+        },
+        {
+            "first_name": "Samy",
+            "last_name": "El Amal",
+            "birth_date": "1997-08-30",
+            "national_id": "PO46830",
+            "score": 0.0
+        },
+        {
+            "first_name": "Pierre",
+            "last_name": "Po",
+            "birth_date": "1980-04-12",
+            "national_id": "PU78349",
+            "score": 0.0
+        }
+    ],
+    "rounds": []
+}

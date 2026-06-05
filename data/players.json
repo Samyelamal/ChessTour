@@ -26,5 +26,19 @@
         "birth_date": "1997-08-30",
         "national_id": "PO46830",
         "score": 0.0
+    },
+    {
+        "first_name": "Pierre",
+        "last_name": "Po",
+        "birth_date": "1980-04-12",
+        "national_id": "PU78349",
+        "score": 0.0
+    },
+    {
+        "first_name": "Dave",
+        "last_name": "Cho",
+        "birth_date": "1987-04-12",
+        "national_id": "DE75684",
+        "score": 0.0
     }
 ]
