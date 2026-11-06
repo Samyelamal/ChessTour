@@ -22,8 +22,8 @@ Application Python de gestion de tournois d'échecs en console, fonctionnant ent
 Cloner le dépôt :
 
 ```bash
-git clone <url-du-repo>
-cd "Projet 4"
+git clone https://github.com/Samyelamal/ChessTour.git
+cd ChessTour
 ```
 
 Créer et activer un environnement virtuel :
@@ -48,26 +48,32 @@ python3 main.py
 
 ## Structure du projet
 
-Projet 4/
+Le code suit le modèle MVC : les modèles portent les données, les vues gèrent l'affichage et la saisie, les contrôleurs font le lien entre les deux.
+
+```
+ChessTour/
 ├── controllers/
-│   ├── app_controller.py        # Contrôleur principal
-│   └── tournament_controller.py # Contrôleur de tournoi
+│   ├── app_controller.py          # Menu principal et navigation
+│   ├── player_controller.py       # Gestion des joueurs
+│   └── tournament_controller.py   # Déroulement d'un tournoi
 ├── models/
-│   ├── match.py                 # Modèle Match
-│   ├── player.py                # Modèle Joueur
-│   ├── round.py                 # Modèle Tour
-│   └── tournament.py            # Modèle Tournoi
+│   ├── match.py
+│   ├── player.py
+│   ├── round.py
+│   └── tournament.py
 ├── views/
-│   ├── menu_view.py             # Affichage des menus
-│   └── tournament_view.py       # Affichage et saisie tournoi
+│   ├── menu_view.py
+│   ├── player_view.py
+│   └── tournament_view.py
 ├── utils/
-│   └── json_manager.py          # Sauvegarde/chargement JSON
+│   └── json_manager.py            # Lecture et écriture des fichiers JSON
 ├── data/
-│   └── tournaments.json         # Données des tournois
-├── flake8_rapport/              # Rapport de conformité PEP 8
-├── main.py                      # Point d'entrée
-├── requirements.txt
-└── README.md
+│   ├── players.json
+│   └── tournaments/               # Un fichier JSON par tournoi
+├── flake8_rapport/                # Rapport de conformité PEP 8
+├── main.py
+└── requirements.txt
+```
 
 ## Utilisation
 

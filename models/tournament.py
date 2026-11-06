@@ -1,5 +1,7 @@
 """Modèle représentant un tournoi d'échecs."""
 
+from datetime import date
+
 from models.player import Player
 from models.round import Round
 
@@ -53,8 +55,6 @@ class Tournament:
     @classmethod
     def from_dict(cls, data: dict) -> "Tournament":
         """Crée un tournoi à partir d'un dictionnaire."""
-        from datetime import date
-
         tournament = cls(
             name=data["name"],
             location=data["location"],
